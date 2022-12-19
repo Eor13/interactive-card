@@ -1,0 +1,177 @@
+html{
+    font-size: 62.5%;
+}
+.container-master{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    background: url(../images/bg-main-desktop.png) no-repeat;
+    background-size: contain;
+    flex-wrap: wrap;
+    column-gap: 90px;
+}
+
+.container-master .container{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    max-width: 448px;
+    width: 100%;
+}
+.container-master .container .card{
+    width: 100%;
+    padding: 25px;
+    margin: 0 10px;
+    color: #FFF;
+    height: 245px;
+}
+
+.container-master .container .card img{
+    width: 60px;
+    height: 35px;
+}
+
+.container-master .container .card .card-number-example{
+    margin-top: 80px;
+    display: flex;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.container-master .container .card .card-info-example{
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem ;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.container-master .container .card-front{
+    display: flex;
+    flex-direction: column;
+    background: url(../images/bg-card-front.png) no-repeat;
+}
+.container-master .container .card-back{
+    display: flex;
+    background: url(../images/bg-card-back.png) no-repeat;
+    margin-left: 100px;
+    justify-content: right;
+}
+
+.container-master .container .card-back p{
+    margin: 80px 25px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.container-master .example{
+    gap: 40px;
+}
+
+.container-master .fill{
+    max-width: 430px;
+    /* background-color: aqua; */
+    margin: 20px;
+    padding: 10px;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.container-master .fill input,
+.container-master .fill button,
+.container-master .fill label{
+    width: 90%;
+    font-size: 2rem;
+    border-radius: 5px;
+    color: var(--color-dark);
+}
+.container-master .fill label{
+    text-transform: uppercase;
+
+}
+
+.container-master .fill input{
+    padding: 10px;
+    border: 1px solid var(--color-font);
+}
+
+.container-master .fill button{
+    background-color: var(--color-dark);
+    border-radius: 10px;
+    color: #FFF;
+    font-weight: 400;
+}
+
+.container-master .fill .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    column-gap: 10px;
+}
+
+.container-master .fill .box-date{
+    display: grid;
+    gap: 10px;
+    grid: "line-top line-top"auto
+          "line-button-1 line-button-2" auto
+          /auto auto;
+}
+
+.container-master .fill .box-date #exp-1{
+    grid-area: line-top;
+    width: 200px;
+}
+.container-master .fill .box-date .exp-2{
+    grid-area: line-button-1;
+    width: 90px;
+}
+.container-master .fill .box-date .exp-3{
+    grid-area: line-button-2;
+    width: 90px;
+}
+
+.container-master .fill .box-cvc{
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Section of data successful */
+
+.container-master .successful{
+    display: flex;
+    align-items: center;
+    display: none;
+    min-width: 500px;
+    
+}
+.container-master .successful img{
+    width: 100px;
+    height: 100px;
+}
+.container-master .successful h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 30px 0 20px;
+}
+.container-master .successful p{
+    color: var(--color-font);
+    font-size: 2rem;
+}
+.container-master .successful button{
+    background-color: var(--color-dark);
+    color:  #FFF;
+    font-size: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    padding: 20px;
+    margin: 30px 0 20px;
+}
