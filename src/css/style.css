@@ -8,7 +8,6 @@ html{
     height: 100vh;
     width: 100vw;
     background: url(../images/bg-main-desktop.png) no-repeat;
-    background-size: contain;
     flex-wrap: wrap;
     column-gap: 90px;
 }
@@ -54,6 +53,7 @@ html{
     display: flex;
     flex-direction: column;
     background: url(../images/bg-card-front.png) no-repeat;
+    background-size: 448px;
 }
 .container-master .container .card-back{
     display: flex;
@@ -73,7 +73,7 @@ html{
 
 .container-master .fill{
     max-width: 430px;
-    /* background-color: aqua; */
+    background-color: aqua;
     margin: 20px;
     padding: 10px;
     align-items: center;
@@ -84,6 +84,7 @@ html{
 .container-master .fill button,
 .container-master .fill label{
     width: 90%;
+    letter-spacing: 2px;
     font-size: 2rem;
     border-radius: 5px;
     color: var(--color-dark);
@@ -95,7 +96,8 @@ html{
 
 .container-master .fill input{
     padding: 10px;
-    border: 1px solid var(--color-font);
+    border: 1px solid var(--color-font-card);
+    color: var(--color-dark);
 }
 
 .container-master .fill button{
@@ -118,12 +120,13 @@ html{
     gap: 10px;
     grid: "line-top line-top"auto
           "line-button-1 line-button-2" auto
+          "erro erro" auto
           /auto auto;
 }
 
 .container-master .fill .box-date #exp-1{
     grid-area: line-top;
-    width: 200px;
+    width: 215px;
 }
 .container-master .fill .box-date .exp-2{
     grid-area: line-button-1;
@@ -141,8 +144,22 @@ html{
     justify-content: center;
     align-items: center;
 }
+.container-master .fill .valido{
+    display: none;  
+    color: var(--color-err);
+    width: 90%;
+    grid-area: erro;
+    font-size: 1.5rem;
+}
 
-
+/* Mensagem de Erro */
+.container-master .fill .errado{
+    display: flex;  
+    color: var(--color-err);
+    width: 90%;
+    grid-area: erro;
+    font-size: 1.5rem;
+}
 
 /* Section of data successful */
 
@@ -163,7 +180,7 @@ html{
     margin: 30px 0 20px;
 }
 .container-master .successful p{
-    color: var(--color-font);
+    color: var(--color-font-card);
     font-size: 2rem;
 }
 .container-master .successful button{

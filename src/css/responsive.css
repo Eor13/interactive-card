@@ -1,0 +1,99 @@
+@media(max-width:1010px){
+    .container-master{
+        position: relative;
+    }
+    .container-master .container .card-front{
+        margin: 10px;
+        position: absolute;
+        top: 17%;
+        left: 2%;
+        z-index: 1;
+        box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.603);
+    }
+    .container-master .container .card-back{
+        margin: 10px 0;
+        position: absolute;
+        top: 4%;
+        left: 20%;
+    }
+
+}
+@media(max-width:375px){
+    .container-master{
+        background: url(../images/bg-main-mobile.png) no-repeat  top right;
+        position: relative;
+    }
+
+    .container-master .container .card{
+        padding: 10px;
+        color: #FFF;
+        height: 245px;
+        background-size: 290px;
+        width: 290px;
+        height: 159px;
+        border-radius: 2px;
+    }
+    .container-master .container .card img{
+        margin: 10px;
+        width: 55px;
+        height: 30px;
+    }
+
+    .container-master .container .card .card-number-example{
+        margin: 25px 0 0;
+        font-size: 2rem;
+    }
+
+    .container-master .container .card .card-info-example{
+        font-size: 1rem;
+        width: 260px;
+    }
+    .container-master .container .card-front{
+        margin: 10px;
+        position: absolute;
+        top: 17%;
+        left: 2%;
+        z-index: 1;
+        box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.603);
+    }
+    .container-master .container .card-back{
+        margin: 10px 0;
+        position: absolute;
+        top: 4%;
+        left: 20%;
+    }
+    .container-master .container .card-back p {
+        margin: 60px 20px;
+        font-size: 1.2rem;
+    }
+    .container-master .example{
+        gap: 0;
+    }
+    .container-master .fill{
+        align-items: flex-start;
+        margin: 0;
+        padding: 10px;
+        row-gap: 10px;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 48%;
+    }
+    .container-master .fill input,
+    .container-master .fill button,
+    .container-master .fill label{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .container-master .fill button{
+        height: 50px;
+        font-size: 1.6rem;
+    }
+    .container-master .fill .box{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .container-master .fill .erro{
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+}

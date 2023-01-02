@@ -1,7 +1,7 @@
 :root{
     --color-gradient:hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /*(active input border)*/
-    --color-err: hsl(0, 100%, 66%); /*(input errors)*/
-    --White:hsl(0, 0%, 100%)
+    --color-err: hwb(0 32% 0%); /*(input errors)*/
+    --White:hsl(0, 0%, 100%);
     --color-font-card:hsl(270, 3%, 87%);
     --color-font:hsl(279, 6%, 55%);
     --color-dark:hsl(278, 68%, 11%);

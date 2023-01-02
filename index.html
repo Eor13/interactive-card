@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/variables.css">
   <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/responsive.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,18 +35,25 @@
 
     <form action="" method="get" class="container fill">
       <label for="name">Cardholder Name</label>
-      <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
+      <input class="campo" type="text" name="name" id="name" placeholder="e.g. Jane Appleseed"  maxlength="16">
+      <p class="valido">dadas</p>
+
       <label for="card-number">Card Number</label>
-      <input type="number" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+      <input class="campo" type="number" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000" size="16" minLength="16" maxlength="16">
+      <p class="valido">Wrong format, numbers only</p>
+      
       <div class="box">
         <div class="box-date">
           <label for="card-expiration" id="exp-1">Exp. Date (MM/YY)</label>
-          <input type="datetime" name="card-expiration" id="card-expiration" class="exp-2" placeholder="MM">
-          <input type="datetime" name="card-expiration" id="card-expiration" class="exp-3" placeholder="YY">
+          <input class="campo" type="datetime" name="card-expiration" id="card-expiration" class="exp-2" placeholder="MM" size="2" minLength="2" maxlength="2">
+          <input class="campo" type="datetime" name="card-expiration" id="card-expiration" class="exp-3" placeholder="YY" size="2" minLength="2" maxlength="2">
+          <p class="valido">Can't be blank</p>
         </div>
+
         <div class="box-cvc">
-          <label for="cvc">CVC</label>
-          <input type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+          <label for="cvc" id="cvc-1">CVC</label>
+          <input class="campo" type="number" name="cvc" id="cvc" placeholder="e.g. 123" size="3">
+          <p class="valido">Can't be blank</p>
         </div>
       </div>
       <button type="submit" id="button">Confirm</button>
@@ -59,5 +67,6 @@
       <button>Continue</button>
     </section>
   </main>
+  <script src="src/js/index.js"></script>
 </body>
 </html>
