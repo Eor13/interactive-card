@@ -1,82 +1,189 @@
 @media(max-width:1010px){
     .container-master{
+        background: url(../images/bg-main-mobile.png) no-repeat  top right;
+        background-size: 1010px 380px;
         position: relative;
+    }
+    .container-master .container .card{
+        padding: 10px;
+        height: 245px;
+        max-width: 448px;
+        border-radius: 2px;
+    }
+    .container-master .container .card .card-info-example{
+        width: 420px;
     }
     .container-master .container .card-front{
         margin: 10px;
         position: absolute;
-        top: 17%;
-        left: 2%;
+        top: 21%;
+        left: 20%;
         z-index: 1;
         box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.603);
     }
     .container-master .container .card-back{
-        margin: 10px 0;
+        margin: 10px;
         position: absolute;
         top: 4%;
-        left: 20%;
+        left: 30%;
     }
-
+    .container-master .container .card-back p {
+        margin: 100px 50px;
+    }
+    .container-master .fill{
+        margin: 0;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 55%;
+        left: 30%;
+    }
+    
+    .container-master .successful{
+        position: absolute;
+        top: 55%;
+        left: 30%;
+    }
 }
-@media(max-width:375px){
-    .container-master{
-        background: url(../images/bg-main-mobile.png) no-repeat  top right;
-        position: relative;
+@media(max-width:950px){
+    
+    .container-master .container .card-front{
+        left: 14%;
     }
+    .container-master .container .card .card-number-example {
+        margin-top: 110px;
+    }
+    .container-master .container .card-back{
+        left: 27%;
+    }
+    .container-master .fill, .container-master .successful{
+        left: 27%;
+    }
+    .container-master .successful{
+        min-width: 447px; 
+    }
+}
 
+@media(max-width:800px){
+    .container-master .container .card-front{
+        left: 6%;
+    }
+    .container-master .container .card-back{
+        left: 22%;
+    }
+    .container-master .fill, .container-master .successful{
+        left: 22%;
+    }
+}
+@media(max-width:650px){
+    .container-master{
+        background-size: 1010px 335px;
+    }
     .container-master .container .card{
-        padding: 10px;
-        color: #FFF;
-        height: 245px;
-        background-size: 290px;
-        width: 290px;
-        height: 159px;
-        border-radius: 2px;
+        background-size: 365px;
+        width: 365px;
+        height: 200px;
+        align-items: baseline;
     }
     .container-master .container .card img{
         margin: 10px;
+    }
+
+    .container-master .container .card .card-number-example{
+        margin: 60px 0 0;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+    .container-master .container .card .card-info-example{
+        width: 310px;
+    }
+    .container-master .container .card-front{
+        top: 19.5%;
+        left: 5%;
+    }
+    .container-master .container .card-back {
+        left: 20%;
+    }
+    .container-master .container .card-back p {
+        margin: 80px 35px;
+    }
+    .container-master .fill{
+        padding: 10px;
+        row-gap: 5px;
+        max-width: 375px;
+        left: 20%;
+    }
+    .container-master .fill input,
+    .container-master .fill button,
+    .container-master .fill label{
+        font-size: 1.8rem;
+        width: 100%;
+    }
+    .container-master .fill button{
+        height: 40px;
+        font-size: 1.8rem;
+    }
+    .container-master .fill .box{
+        width: 100%;
+    }
+    /* .container-master .fill .errado {
+        font-size: 1.2rem;
+    } */
+    .container-master .successful{
+        min-width: 365px; 
+    }
+    .container-master .successful img{
+        width: 90px;
+        height: 90px;
+    }
+    .container-master .successful h2{
+        font-size: 2.5rem;
+    }
+
+    .container-master .successful button{
+        margin: 15px 0;
+    }
+}
+
+@media(max-width:550px){
+    .container-master{
+        background-size: 1010px 285px;
+    }
+    .container-master .container .card{
+        background-size: 320px;
+        width: 320px;
+        height: 175px;
+    }
+    .container-master .container .card img{
         width: 55px;
         height: 30px;
     }
 
     .container-master .container .card .card-number-example{
-        margin: 25px 0 0;
-        font-size: 2rem;
+        margin: 45px 0 0;
+        font-size: 2.1rem;
+        
     }
 
     .container-master .container .card .card-info-example{
-        font-size: 1rem;
-        width: 260px;
+        width: 270px;
     }
     .container-master .container .card-front{
-        margin: 10px;
-        position: absolute;
-        top: 17%;
+        top: 16%;
         left: 2%;
-        z-index: 1;
-        box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.603);
+        padding-left: 15px;
     }
     .container-master .container .card-back{
-        margin: 10px 0;
-        position: absolute;
-        top: 4%;
-        left: 20%;
+        margin: 10px;
+        left: 16%;
     }
     .container-master .container .card-back p {
-        margin: 60px 20px;
-        font-size: 1.2rem;
+        margin: 67px 35px;
     }
-    .container-master .example{
-        gap: 0;
-    }
-    .container-master .fill{
-        align-items: flex-start;
-        margin: 0;
-        padding: 10px;
-        row-gap: 10px;
-        letter-spacing: 2px;
-        position: absolute;
-        top: 48%;
+    .container-master .fill {
+        top: 45%;
+        left: 10%;
+        max-width: 335px;
     }
     .container-master .fill input,
     .container-master .fill button,
@@ -88,12 +195,101 @@
         height: 50px;
         font-size: 1.6rem;
     }
-    .container-master .fill .box{
-        justify-content: space-between;
-        width: 100%;
-    }
     .container-master .fill .erro{
         font-size: 1.2rem;
         letter-spacing: 1px;
+    }
+
+    .container-master .successful {
+        min-width: 360px;
+        top: 45%;
+        left: 14%;
+    }
+
+}
+@media(max-width:425px){
+    .container-master{
+        background-size: 1010px 285px;
+    }
+    .container-master .container .card{
+        background-size: 300px;
+        width: 300px;
+        height: 165px;
+    }
+    .container-master .container .card .card-number-example{
+        margin: 35px 0 0;
+        font-size: 2rem;
+        margin-left: 10px;
+    }
+
+    .container-master .container .card .card-info-example{
+        width: 260px;
+        font-size: 1.3rem;
+        margin-left: 10px;
+    }
+    .container-master .container .card-front{
+        top: 18%;
+        left: 2%;
+        padding-left: 15px;
+    }
+    .container-master .container .card-back{
+        margin: 10px;
+        left: 20%;
+    }
+    .container-master .container .card-back p {
+        margin: 61px 25px;
+    }
+    
+    .container-master .successful {
+        min-width: 320px;
+    }
+}
+
+@media(max-width:395px){
+    .container-master{
+        background-size: 1010px 248px;
+    }
+    .container-master .container .card{
+        padding: 10px;
+        background-size: 270px;
+        width: 270px;
+        height: 148px;
+    }
+    .container-master .container .card .card-number-example{
+        margin: 25px 0 0;
+        font-size: 1.8rem;
+    }
+    .container-master .container .card .card-info-example{
+        font-size: 1rem;
+        width: 235px;
+    }
+    .container-master .container .card-front{
+        margin: 10px;
+        top: 15%;
+        left: 0;
+        
+    }
+    .container-master .container .card-back{
+        left: 17%;
+    }
+    .container-master .container .card-back p {
+        margin: 55px 20px;
+        font-size: 1.3rem;
+    }
+    .container-master .example{
+        gap: 0;
+    }
+    .container-master .fill {
+        top: 40%;
+        left: 2%;
+        max-width: 355px;
+    }
+    .container-master .fill .errado{
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    .container-master .successful {
+        min-width: 290px;
+        top: 40%;
     }
 }

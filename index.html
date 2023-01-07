@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
   
@@ -15,6 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/imask"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js" integrity="sha512-SvgzybymTn9KvnNGu0HxXiGoNeOi0TTK7viiG0EGn2Qbeu/NFi3JdWrJs2JHiGA1Lph+dxiDv5F9gDlcgBzjfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <main class="container-master">
@@ -22,37 +24,38 @@
     <section class="container example">
       <div class="card card-front">
         <img src="src/images/card-logo.svg" alt="card-logo">
-        <p class="card-number-example">0000  0000  0000   0000</p>
+        <p class="card-number-example">0000 0000 0000 0000</p>
         <div class="card-info-example">
           <p class="card-name-example">Jane Appleseed</p>
           <p class="card-date-example">00/00</p>
         </div>
       </div>
       <div class="card card-back">
-        <p>000</p>
+        <p class="card-cvc-example">000</p>
       </div>
     </section >
 
-    <form action="" method="get" class="container fill">
+    <form action="" method="post" class="container fill" id="registro-formulario">
       <label for="name">Cardholder Name</label>
-      <input class="campo" type="text" name="name" id="name" placeholder="e.g. Jane Appleseed"  maxlength="16">
+      <input class="campo" type="text" name="name" id="name" minlength="3" maxlength="16" title="digite o nome que está no cartão" placeholder="e.g. Jane Appleseed">
       <p class="valido">dadas</p>
 
-      <label for="card-number">Card Number</label>
-      <input class="campo" type="number" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000" size="16" minLength="16" maxlength="16">
+      <label for="cardNumber">Card Number</label>
+      <input class="campo" type="text" name="cardNumber" id="card-number" max="16" pattern="^([0-9 ]+)+$" title="digite o número do cartão" placeholder="e.g. 1234 5678 9123 0000">
       <p class="valido">Wrong format, numbers only</p>
       
       <div class="box">
         <div class="box-date">
-          <label for="card-expiration" id="exp-1">Exp. Date (MM/YY)</label>
-          <input class="campo" type="datetime" name="card-expiration" id="card-expiration" class="exp-2" placeholder="MM" size="2" minLength="2" maxlength="2">
-          <input class="campo" type="datetime" name="card-expiration" id="card-expiration" class="exp-3" placeholder="YY" size="2" minLength="2" maxlength="2">
+          <label for="cardExpiration" id="exp-1">Exp. Date (MM/YY)</label>
+          <input class="campo" type="datetime" name="cardExpiration" id="card-expiration" class="exp-2" title="digite o mês de vencimento do cartão" placeholder="MM" min="2">
+          <p class="valido" style="display:none;">Can't be blank</p>
+          <input class="campo" type="datetime" name="cardExpiration" id="card-expiration" class="exp-3" title="digite o ano de vencimento do cartão" placeholder="YY"min="2">
           <p class="valido">Can't be blank</p>
         </div>
 
         <div class="box-cvc">
           <label for="cvc" id="cvc-1">CVC</label>
-          <input class="campo" type="number" name="cvc" id="cvc" placeholder="e.g. 123" size="3">
+          <input class="campo" type="tel" name="cvc" id="cvc" placeholder="e.g. 123" minlength="3" maxlength="3" title="digite o código de segurança do cartão" placeholder="e.g. 123" min="3">
           <p class="valido">Can't be blank</p>
         </div>
       </div>
@@ -60,7 +63,7 @@
     </form>
 
 
-    <section class="container successful">
+    <section class="container successful unsuccessful">
       <img src="src/images/icon-complete.svg" alt="icon of complete">
       <h2>Thank you!</h2>
       <p>We've added your card details</p>
